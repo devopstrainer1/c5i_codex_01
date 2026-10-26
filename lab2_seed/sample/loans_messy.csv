@@ -1,0 +1,7 @@
+account_id,borrower_name,principal,tenor_months,notes
+LN-2001,Imran Shaikh,200000,48,
+,Priya Nair,120000,24,account id blank
+   ,Karan Batra,90000,18,whitespace only id
+LN-2004,Sunita Rao,abc,36,bad principal
+LN-2005,,75000,12,no name
+LN-2006,Dev Malhotra,60000,72,tenor too long

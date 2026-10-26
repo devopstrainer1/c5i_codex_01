@@ -1,0 +1,14 @@
+--- a/loan_intake/importer.py
++++ b/loan_intake/importer.py
+@@
++def _clean_account_id(row_number, value):
++    cleaned = (value or "").strip()
++    if not cleaned:
++        raise ValidationError(row_number, "account_id", "required")
++    return cleaned
++
++
+ def _parse_row(row_number, raw):
+     record = {
+-        "account_id": raw.get("account_id"),
++        "account_id": _clean_account_id(row_number, raw.get("account_id")),
